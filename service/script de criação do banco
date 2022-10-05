@@ -1,0 +1,29 @@
+Postgres
+create sequence produto_id_seq;
+create table produto (
+    id int default nextval('produto_id_seq') primary key,
+    nome varchar (30) not null,
+    descrcao varchar(60) not null
+);
+
+create sequence usuario_id_seq;
+create table usuario (
+    id int default nextval('usuario_id_seq') primary key,
+    nome varchar (30) not null,
+    email varchar(60) not null,
+    senha varchar(60) not null
+);
+
+MySQL
+create table produto (
+    id int primary key AUTO_INCREMENT,
+    nome varchar (30) not null,
+    descrcao varchar(60) not null
+);
+
+create table usuario (
+    id int primary key AUTO_INCREMENT,
+    nome varchar (30) not null,
+    email varchar(60) not null,
+    senha varchar(60) not null
+);
